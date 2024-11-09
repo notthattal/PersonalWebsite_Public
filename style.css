@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+blockquote {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1, .h1 {
+  font-size: 65px;
+  opacity: 90%;
+}
+
+.lead {
+  opacity: 90%;
+}
+
+#title-paragraph {
+  position: relative;
+  left: -7px;
+}
+
+h2, .h2 {
+  font-size: 45px;
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  font-size: 28px;
+}
+
+sup, .sup {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.underline::after {
+  content: ' ';
+  border-bottom: 3px solid;
+  position: relative;
+  display: block;
+  width: 75px;
+  padding-top: 1rem;
+}
+
+.toast {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.underline.text-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-inverse {
+  margin-top: 180px;
+  padding: 1px 0px;
+}
+
+.section-inverse > div {
+  margin-top: -180px;
+}
+
+header.p-section {
+  background-size: cover; /* Make sure the image covers the entire header */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 160px 0px 120px;
+  color: white;
+  height: 100vh;
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center the text */
+}
+
+.p-section {
+  padding: 100px 0px;
+}
+
+.p-section-lg {
+  padding: 160px 0px;
+}
+
+.container-lg {
+  max-width: 900px;
+}
+
+.w-md {
+  max-width: 600px;
+}
+
+.w-sm {
+  max-width: 400px;
+}
+
+.btn {
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .65rem 1.5rem;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  padding: .75rem 2rem;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: .30rem .75rem;
+}
+
+.marker-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.marker-highlight:before {
+  content: "";
+  background-color: #0b6efd87;
+  width: 102%;
+  height: 0.2em;
+  position: absolute;
+  z-index: -2;
+  filter: url(#marker-shape);
+  left: -0.05em;
+  padding: 0 0.25em;
+  bottom: 0.2em;
+}
+
+/*--------------------------------------------------------------
+# Nav Section
+--------------------------------------------------------------*/
+.navbar {
+  opacity: 100%;
+  background-color: #080808;
+}
+
+.navbar-light .navbar-nav {
+  text-transform: uppercase;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: white;
+  background-color: black;
+  opacity: 1;
+}
+
+.navbar-brand {
+  color: white !important; /* Ensures the text color stays white */
+  font-family: 'Times New Roman';
+  font-size: 16pt;
+  font-weight: bold;
+  text-decoration: none; /* No underline initially */
+  position: relative; /* Needed for the pseudo-element positioning */
+  transition: color 1s ease; /* Slow transition for color */
+}
+
+.navbar-brand::after {
+  content: ''; /* Ensure the pseudo-element is generated */
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value based on your design */
+  width: 100%; /* Full width underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: white; /* Color of the underline */
+  opacity: 0; /* Start with an invisible underline */
+  transition: opacity 0.4s ease; /* Only transition opacity */
+}
+
+.navbar-brand:hover::after {
+  opacity: 1; /* Fade in the underline on hover */
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.nav-item .nav-link {
+  text-transform: uppercase;
+  margin-right: 10px;
+  color: white;
+  opacity: 1.0;
+  text-decoration: none; /* No underline initially */
+  position: relative; /* Positioning for the pseudo-element */
+  transition: color 1s ease; /* Slow transition for color */
+}
+
+.nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5px; /* Adjust this value based on your design */
+  width: 100%; /* Full width underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: white; /* Color of the underline */
+  opacity: 0; /* Start with invisible underline */
+  transition: opacity 0.4s ease; /* Only transition opacity */
+}
+
+.nav-item .nav-link:hover::after {
+  opacity: 1; /* Fade in the underline */
+}
+
+.collapse {
+  text-transform: uppercase;
+}
+
+/* Apply translateX only on larger screens (lg and above) */
+@media (min-width: 1100px) {
+  .collapse {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transform: translateX(100px);
+  }
+}
+/*------------------------ End Nav ---------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+
+.portfolio-items {
+  display: flex;
+  z-index: 1000;
+  flex-wrap: nowrap; /* Ensure items stay in a single row */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  position: relative; /* Make .portfolio-items the reference point for the arrow */
+  padding: 0 60px; /* Increase padding to make room for arrows */
+}
+
+.portfolio-items .col-sm-4 {
+  flex: 0 0 auto;
+  width: 400px; /* Set a fixed width for each item */
+  margin-right: 15px; /* Space between items */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.card-body {
+  background-color: white;
+  height: 200px;
+}
+
+.card-text {
+  overflow-y: scroll;
+  max-height: 150px;
+}
+
+.card-footer {
+  background-color: white;
+  padding: 1rem 1rem;
+}
+
+.card-btn {
+  background-color: #ededed; /* A couple of shades darker than light gray */
+  color: #000;
+  outline: none;
+}
+
+.card-btn:hover {
+  background-color: #d1d1d1; /* Slightly darker on hover */
+}
+
+.card-btn:focus, .card-btn:active {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any potential focus shadow */
+}
+
+.background-image {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust based on desired video height */
+  overflow: hidden; /* Ensure the video does not overflow */
+  background-repeat: no-repeat;
+}
+
+.background-video-container {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust based on desired video height */
+  overflow: hidden; /* Ensure the video does not overflow */
+  background-repeat: no-repeat;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    pointer-events: none;
+}
+
+.slick-list,
+.slick-track {
+  transition-delay: 10ms;
+}
+
+/* Fallback image styling */
+.mobile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  pointer-events: none;
+}
+
+/*------------------------ Slick -----------------------------*/
+.right-arrow {
+  font-size: 150px;
+  position: absolute;
+  z-index: 1000;
+  top: 20%;
+  right: 0px;
+}
+
+.left-arrow {
+  font-size: 150px;
+  position: absolute;
+  z-index: 1000;
+  top: 20%;
+  left: -10px;
+}
+
+.scroll-arrow-right {
+  color: black; /* Ensure the arrow is visible */
+}
+
+.scroll-arrow-left {
+  color: black; /* Ensure the arrow is visible */
+}
+
+/* Apply square style on mobile */
+@media (max-width: 575px) {
+  .left-arrow {
+    left: 0px;
+  }
+}
+/*------------------------ End Slick -------------------------*/
+
+/*------------------------ BlockQuotes -----------------------*/
+.blockquote-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap; /* Keep the items on the same line */
+  max-width: 100%; /* Ensure the container doesn’t exceed the parent’s width */
+  overflow: hidden; /* Prevent content from spilling out of the container */
+}
+
+.blockquote-container blockquote {
+  flex-shrink: 1; /* Allow blockquote to shrink if needed */
+  margin: 0; /* Remove default margins */
+  padding-right: 10px; /* Space between blockquote and date */
+  max-width: 60%; /* Adjust max-width to ensure room for the date */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Show ellipsis if text is too long */
+  white-space: normal; /* Allow text to wrap within the blockquote */
+}
+
+.blockquote-container .job-date {
+  flex-shrink: 0; /* Prevent the date from shrinking */
+  white-space: nowrap; /* Keep date on one line */
+  margin-left: auto; /* Pushes the job-date to the right */
+}
+
+.blockquote-image {
+  margin-right: 10px; /* Space between the image and the blockquote text */
+  width: 150px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .blockquote-container blockquote {
+      font-size: 22px; /* Slightly reduce text size on mobile */
+  }
+}
+/*------------------------ End BlockQuotes -----------------------*/
+
+/*--------------------- End Portfolio Section ----------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+# Experience Section
+--------------------------------------------------------------*/
+
+.job-date {
+  margin-left: auto; /* Pushes the job-date to the right */
+}
+
+.job-title {
+  font-style: italic;
+}
+
+.experience-item {
+  max-width: 800px;
+  padding: 40px;
+}
+
+.experience-item:nth-child(even) {
+  margin-left: auto;
+}
+
+.experience-image {
+  max-width: 100px;
+  float: left;
+  margin-right: 25px;
+}
+
+.resume-btn {
+  background-color: #ededed; /* A couple of shades darker than light gray */
+  color: #000;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.resume-btn:hover{
+  background-color: #d1d1d1; /* Slightly darker on hover */
+  border-color: #bbb;
+}
+
+.resume-btn:focus, .resume-btn:active {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any potential focus shadow */
+  border-color: #bbb; /* Keep border color consistent */
+}
+
+/*--------------------- End Experience Section ----------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+# Research Section
+--------------------------------------------------------------*/
+.research .research-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.research .research-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.research .research-filters li:hover,
+.research .research-filters li.filter-active {
+  color: var(--accent-color);
+}
+
+.research .research-filters li:first-child {
+  margin-left: 0;
+}
+
+.research .research-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .research .research-filters li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+.research-content-link {
+  cursor: default;
+}
+
+.research .research-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.research .research-content img {
+  transition: 0.3s;
+}
+
+.research .research-content .research-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+
+.research .research-content .research-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+  background-color: var(--accent-color);
+}
+
+.research .research-content .research-info p {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.research-info p {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(50% - 14px);
+  transition: 0.3s;
+  line-height: 1.2;
+  bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.research .research-content .research-info .preview-link,
+.research .research-content .research-info .details-link {
+  position: absolute;
+  left: calc(50% - 40px);
+  font-size: 26px;
+  top: calc(50% - 14px);
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+.research .research-content .research-info .preview-link:hover,
+.research .research-content .research-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+.research .research-content .research-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.research .research-content:hover .research-info {
+  opacity: 1;
+}
+
+.research .research-content:hover img {
+  transform: scale(1.1);
+}
+
+.research-details .research-details-slider img {
+  width: 100%;
+}
+
+.research-details .research-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.research-details .research-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.research-details .research-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.research-details .research-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.research-details .research-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.research-details .research-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.research-details .research-info ul li+li {
+  margin-top: 10px;
+}
+
+.research-details .research-description {
+  padding-top: 30px;
+}
+
+.research-details .research-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.research-details .research-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/*--------------------- End Research Section ----------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+#about-headshot {
+  border-radius: 500px; /* Make it circular by default */
+}
+
+.circle {
+  border-radius: 500px;
+}
+
+/* Apply square style on mobile */
+@media (max-width: 575px) {
+  #about-headshot {
+      border-radius: 0; /* Make it square on mobile */
+  }
+}
+
+/*--------------------- End About Section ----------------------*/

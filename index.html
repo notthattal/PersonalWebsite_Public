@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tal Erez</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="icon" href="./img/Favicon.svg" type="image/x-icon">
+  <link rel="icon" href="./img/FaviconFallback.ico" type="image/x-icon" sizes="64x64">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top"> 
+    <div class="container">
+      <a class="navbar-brand" href="#">Tal Erez</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bi-list"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#research">Travel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class='text-center p-section svg-background' style="background-image: url('./img/RippleLine4.svg'); background-size: cover; background-position: center center;">
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-md-6 offset-md-3'>
+          <h1>Tal Erez</h1>
+          <p class='lead mb-5' id="title-paragraph">Software Engineer | Artificial Intelligence Researcher | World Traveler </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id='about' class='p-section bg-light'>
+    <div class='container'>
+      <h2 class='mb-5 underline'>About</h2>
+      <div class='row flex-row'>
+        <div class='col-sm-4'>
+          <img src="./img/Headshot.png" class='mb-3' id="about-headshot">
+        </div>
+        <div class='col-sm-8'>
+          <p class='lead'>Los Angeles native with a passion for creating innovative artificial intelligence technologies and a high propensity for learning, mastering advanced technical skills and working collaboratively with others.</p>
+          <p class='lead'>In my career I have successfully built cybersecurity tools for Amazon, developed the #1 best-selling video game of 2023, Hogwarts Legacy, and improved the accuracy of simulations for the backend of the Kalloc Studios physics engine, resulting in securing Disney as the largest client in company history.</p>
+          <p class='lead'>Currently pursuing a master of engineering in artificial intelligence from Duke University. Some notable research I have been conducting in pursuit of this degree include generating imperceptible audio perturbations to safeguard artists&rsquo; work from copyright infringement, and designing an early-onset predictive model for multiple sclerosis using sensor data retrieved from functional electrical stimulation braces.</p>
+          <p class='lead'>Outside of work, I have been lucky enough to have the opportunity to travel the world, circumnavigating the globe twice and backpacking through 25 countries solo. I aim to use my understanding of diverse cultures and global dynamics gained through my travels, along with my technical expertise, to become a pioneer in the emerging field of artificial intelligence.</p>
+          <div class='card-footer bg-light'>
+            <a href="./Resume_2024.pdf" download="Resume_2024.pdf" target="_blank" class='btn resume-btn'><i class="bi-arrow-down-circle"></i> Resume</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id='portfolio' class='p-section'>
+    <div class='container'>
+      <h2 class='mb-5 underline'>Portfolio</h2>
+        <div class='row mb-5'>
+          <div class="portfolio-items">
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-video-container' id='lander_container'>
+                  <video muted loop class="background-video">
+                    <source src="./img/lunar_lander3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class='card-body'>
+                  <h3>Lunar Lander</h3>
+                  <p class='card-text mb-3'>A reinforcement learning algorithm built using Tensorflow to successfully complete landing simulations. Leveraging OpenAI's gymnasium library to create visual simulations of the model's performance.</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/LunarLanderProject' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/HogwartsLegacy.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Hogwarts Legacy</h3>
+                  <p class='card-text mb-3'>The #1 Best-Selling Video Game of 2023. An immersive, open-world action RPG set 500 years before the events that take place in the Harry Potter series.</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://www.hogwartslegacy.com/en-us' class='btn btn-sm card-btn' target="_blank"><i class="bi-arrow-up-right-circle"></i> Home Page</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-video-container' id='improviz_container'>
+                  <video muted loop class="background-video">
+                    <source src="./img/Improviz.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class='card-body'>
+                  <h3>Improviz</h3>
+                  <p class='card-text mb-3'>Improviz is a real-time voice to visualization AI application. Leveraging advanced speech transcription, embedding models and LLMs to create immersive presentations</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/improviz' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/ExplainableDeepLearning.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Deep Learning Model Analysis</h3>
+                  <p class='card-text mb-3'>Evaluating computer vision model layers using Grad-CAM in order to analyze if deeper layers become more localized to important image attributes</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/ExplainableDeepLearning' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/ExplainableLLMs.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Explainable LLMs</h3>
+                  <p class='card-text mb-3'>Analyzing embeddings generated from a model trained on medical documentation through creating 2D and 3D explainable visualizations using tSNE, PCA and UMAP</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/Explainable_LLMs' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/WebAppExampleImg.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Explainable AI Techniques</h3>
+                  <p class='card-text mb-3'>A webapp and Jupyter notebook using LIME to generate local explanations for images from a small version of the ImageNet library and pretrained on the ResNet34 model</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/ExplainableTechniques' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/movie_predictions.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Movie Recommendation AI</h3>
+                  <p class='card-text mb-3'>A content-based movie recommendation model developed using Sklearn and TensorFlow, and a neural network architecture.</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/ContentBasedMovieRecAI' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/CART.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Interpretable ML: Trees and Rule Sets</h3>
+                  <p class='card-text mb-3'>Creating interpretable classification models using CART and FIGS decision trees and Rule-Fit rule sets</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/InterpretableML_II' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-sm-4'>
+              <div class='card h-100'>
+                <div class='background-image' style='background-image: url(img/CovidEda.png)'>
+                </div>
+                <div class='card-body'>
+                  <h3>Covid-19 EDA</h3>
+                  <p class='card-text mb-3'>Performing exploratory data analysis on the Welltory COVID-19 and Wearables datasets to determine feature importance for modeling</p>
+                </div>
+                <div class='card-footer'>
+                  <a href='https://github.com/notthattal/InterpretableML_II' class='btn btn-sm card-btn' target="_blank"><i class="bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id='education' class='p-section bg-light'>
+    <div class='container'>
+      <h2 class='mb-5 underline'>Education</h2>
+
+      <div>
+        <div class="blockquote-container" id="duke-blockquote">
+          <blockquote>Duke University</blockquote>
+          <p class='job-date'>  May 2025</p>
+        </div>
+        <p class='job-title'>     Master of Engineering - Artificial Intelligence</p>
+        <p>     Coursework: MLOps, Emerging Trends in Explainable AI, Sourcing Data for Analytics, Deep Learning, Modeling Process & Algorithms</p>
+      </div>
+
+      <div>
+        <div class="blockquote-container" id="ucsd-blockquote">
+          <blockquote>University of California, San Diego</blockquote>
+          <p class='job-date'>March 2020</p>
+        </div>
+        <p class='job-title'>     Bachelor of Science - Applied Mathematics</p>
+        <p>     Coursework: Exploratory Data Analysis and Inference, Applied Linear Algebra, Computational Statistics, Graph Theory</p>
+      </div>
+  </section>
+
+  <section id='experience' class='p-section'>
+    <div class='container'>
+      <h2 class='mb-5 underline'>Experience</h2>
+
+      <div>
+        <div class="blockquote-container" id="amazon-blockquote">
+          <blockquote>Amazon</blockquote>
+          <p class='job-date'>July 2022 - January 2023</p>
+        </div>
+        <p class='job-title'>Contract Software Development Engineer</p>
+        <ul>
+          <li>Migrated databases for the Related Accounts Presentation Service (RAPS), the service used to connect one merchant account to another across regions worldwide, preventing loss of data before deprecation of the previous storage service.</li>
+          <li>Created alarms in CloudWatch (an Amazon Web Service) to monitor errors, fatal logs and CPU utilization thresholds for the RAPS service. This resulted in faster response times to service failures.</li>
+          <li>Built a filtering method in Ruby to retrieve a merchant's compliance status within a designated timeframe for the internal website used to conduct seller investigations. This new approach eliminated the need to parse through a seller's full history and reduced investigation times.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="blockquote-container" id="shiver-blockquote">
+          <blockquote>Shiver Entertainment Inc.</blockquote>
+          <p class='job-date'>July 2021 - July 2022</p>
+        </div>
+        <p class='job-title'>Software Engineer</p>
+        <ul>
+          <li>Contributed to the development of Hogwarts Legacy in collaboration with Warner Bros. and Avalanche Studios for the PS4, XB1 and Nintendo Switch consoles using Unreal Engine. Selling over 24 million copies globally, Hogwarts Legacy became the #1 best-selling video game of 2023.</li>
+          <li>Converted the codebase from Unicode to UTF-8, saving 250 MB of physical used memory as reported by automation tests.</li>
+          <li>Altered the multi-thread framework of the game to efficiently pin threads to specific cores in order to reduce idle time on the Nintendo Switch platform. This improved overall frame rate by an average of 10 ms per frame.</li>
+          <li>Implemented an LOD system for game visual effects which reduced memory usage by an average of 100 MB and utilized Unreal Engine scripting to create an automated way of implementing the new system for all platforms.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="blockquote-container" id="kalloc-blockquote">
+          <blockquote>Kalloc Studios Inc.</blockquote>
+          <p class='job-date'>October 2020 - July 2021</p>
+        </div>
+        <p class='job-title'>Software Engineer</p>
+        <ul>
+          <li>Supervised software development for all sectors of our PC, Android, iOS, VR and Hololens/AR platforms including UX/UI development, memory management and 3D simulation development.</li>
+          <li>Created a recycler view framework for the PC platform. Benchmarking a reduction in size to large cache files by up to 25% and increased the average FPS for these files from 2 fps to 20 fps.</li>
+          <li>Utilized forward kinematics to construct an algorithm which streamlined the process for animating vehicles in engine.</li>
+          <li>Converted the company's VR platform from utilizing its own separate user interface to leveraging the software's PC interface, enabling users to switch platforms seamlessly.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="research p-section bg-light">
+    <div class="container">
+      <h2 class='mb-5 underline'>Travel</h2>
+      <h1></h1>
+      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/Whitsundays.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Whitsunday Islands, Australia</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/NorwegianFjordTent.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Olden, Norway</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/ChiangMai.jpg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Chiang Mai, Thailand</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/GalapagosSeal.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Galapagos Islands, Ecuador</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/ColombiaATV.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Medellin, Colombia</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/Kyoto.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Kyoto, Japan</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/LisbonWall.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Lisbon, Portugal</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/BaliRiceFields.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Bali, Indonesia</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/OkutaBayNZ.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Okuta Bay, New Zealand</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+          <div class="col-lg-4 col-md-6 research-item isotope-item filter-app">
+            <div class="research-content h-100">
+                <a href="javascript:void(0);" target="" class="research-content-link">
+                  <img src="./img/Quokka.jpeg" class="img-fluid" alt="">
+                  <div class="research-info">
+                    <p>Rottnest Island, Australia</p>
+                  </div>
+                </a>
+              </div>
+          </div><!-- End Research Item -->
+
+        </div><!-- End Research Container -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Research Section -->
+
+  <footer class='bg-black p-5 text-white'>
+    <div class='container'>
+      <div class='row'>
+        <div>
+          <ul class='list-inline float-end'>
+            <li class='list-inline-item h4 mb-0 me-3'>
+              <a href='https://www.linkedin.com/in/tal-erez/' target='_blank' class='text-light'>
+                <i class="bi-linkedin"></i>
+              </a>
+            </li>
+            <li class='list-inline-item h4 mb-0 me-3'>
+              <a href='https://github.com/notthattal' target='_blank' class='text-light'>
+                <i class="bi-github"></i>
+              </a>
+            </li>
+            <li class='list-inline-item h4 mb-0 me-3'>
+              <a href='https://www.instagram.com/talerez_/' target='_blank' class='text-light'>
+                <i class="bi-instagram"></i>
+              </a>
+            </li>
+            <li class='list-inline-item h4 mb-0 me-3'>
+              <a href='mailto:talerez525@gmail.com' target='_blank' class='text-light'>
+                <i class="bi-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+    <defs>
+      <filter id="marker-shape">
+        <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="video_scripts.js"></script>
+  </script>
+</body>
+</html>
