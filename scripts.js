@@ -1,8 +1,9 @@
+//Checks if running on a mobile device
 function isMobileDevice() {
-    return true; ///Mobi|Android/i.test(navigator.userAgent);
+    return /Mobi|Android/i.test(navigator.userAgent);
 }
 
-//image names should all contain extensions as they can be .jpg or .png
+//Creates the image/video elements of the portfolio carousel 
 function createImageElement(imageName, containerID) {
     var container = document.querySelector('#' + containerID)
 
@@ -37,15 +38,15 @@ $(document).ready(function() {
         pauseOnHover: false, // Ensure that hovering over videos doesn't pause them
         responsive: [
             {
-                breakpoint: 1500, // At 1500px wide or less
+                breakpoint: 1500,
                 settings: {
-                    slidesToShow: 2, // Show 2 slides
+                    slidesToShow: 2,
                 }
             },
             {
-                breakpoint: isMobileDevice() ? 1100 : 1000, // At 1000px wide or less
+                breakpoint: isMobileDevice() ? 1100 : 1000,
                 settings: {
-                    slidesToShow: 1, // Show 1 slide
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -57,7 +58,7 @@ $(document).ready(function() {
     $('.portfolio-items .slick-slide').each(function(index, slide) {
         var video = $(slide).find('video').get(0);
         if (video) {
-            videoTimes[index] = videoTimes[index] || 0; // Use stored time or start at 0
+            videoTimes[index] = videoTimes[index] || 0;
             video.currentTime = videoTimes[index];
             video.play();
         }
